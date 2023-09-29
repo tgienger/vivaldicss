@@ -1,0 +1,46 @@
+/**[Auto hide address bar]**/
+
+.toolbar-addressbar {
+visibility: hidden;
+position: fixed;
+width: 100%;
+opacity: 0;
+z-index: 2;
+transition: opacity .2s linear .1s, visibility 0s linear 1s;
+}
+
+
+
+/**[Reveal on hover]**/
+
+#header:hover ~ #main .toolbar-addressbar, .toolbar-addressbar:hover {
+visibility: visible;
+opacity: 1;
+transition-delay: 0s;
+}  
+
+.SearchField,
+.UrlBar-AddressField {
+  border-radius: var(--radius);
+  border: 1px solid var(--colorBorder);
+  color: var(--colorFg);
+  background-color: var(--colorBgIntenser);
+  align-items: center;
+  display: flex;
+}
+#panels-container {
+  display: flex;
+  flex: 0 0 auto;
+  max-width: 61.8%;
+  overflow: visible;
+  position: relative;
+  color: var(--colorFg);
+  border: 0px solid var(--colorBorder);
+  border-right: 1px solid var(--colorBorder);
+  background-color: var(--colorBgAlphaBlur);
+  z-index: 1;
+}
+#panels-container.left:not(.icons) .panel-group,
+#panels-container.left.icons:not(:has(.SlideBar)) {
+border-right: 1px solid  var(--colorBorder);
+}
