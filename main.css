@@ -2,8 +2,9 @@
     min-height: 0px;
 }
 
+.tabs-top.tabs-at-edge.fullscreen .vivaldi, .tabs-top.tabs-at-edge.maximized .vivaldi,
 .vivaldi {
-    margin: 0;
+    margin: 3px;
 }
 
 .tab::after,
